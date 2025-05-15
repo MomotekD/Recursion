@@ -12,6 +12,7 @@ function fibs(n){
 console.log(fibs(10));
 
 function fibsRec(n){
+    console.log('this was printed recursively');
     if(n === 0){
         return [];
     }
