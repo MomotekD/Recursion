@@ -9,4 +9,22 @@ function fibs(n){
   return startingArr
 }
 
-console.log(fibs(5))
+console.log(fibs(10))
+
+function fibsRec(n) {
+    if(n === 0){
+        return []
+    }
+    if(n === 1){
+        return [0]
+    }
+   if(n === 2){
+        return [0, 1]
+   }
+   let prev = fibsRec(n - 1)
+   let nextNumber = prev[prev.length - 1] + prev[prev.length - 2]
+   prev.push(nextNumber)
+   return prev
+}
+
+console.log(fibsRec(0))
